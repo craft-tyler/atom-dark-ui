@@ -1,10 +1,10 @@
 {
-  "name": "atom-dark-ui",
+  "name": "trappist-one-ui",
   "theme": "ui",
-  "version": "0.53.0",
-  "description": "A dark UI theme for Atom",
+  "version": "1.0.0",
+  "description": "A dark UI theme for Atom inpired by Trappist-1",
   "license": "MIT",
-  "repository": "https://github.com/atom/atom-dark-ui",
+  "repository": "https://github.com/craft-tyler/trappist-one-ui",
   "engines": {
     "atom": ">0.40.0"
   }

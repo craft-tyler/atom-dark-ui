@@ -1,19 +1,26 @@
 .btn-background (@color, @hover-color, @selected-color, @text-color) {
   color: @text-color;
-  background-color: transparent;
-  background-image: -webkit-linear-gradient(@color, darken(@color, 5%));
+  background-color: @color;
 
   &:focus {
     color: @text-color;
+    outline: none;
+    background-color: @color;
   }
   &:hover {
-    color: @text-color-highlight;
-    background-image: -webkit-linear-gradient(@hover-color, darken(@hover-color, 5%));
+    color: @text-color;
+    background-color: @hover-color;
+  }
+  &:active {
+      box-shadow: none;
+      &:focus {
+        outline: none;
+      }
   }
   &.selected,
   &.selected:hover {
-    color: @text-color-highlight;
-    background-image: -webkit-linear-gradient(darken(@selected-color, 5%), @selected-color);
+    color: @text-color;
+    background-color: @grey;
     &:hover {
       background-image: -webkit-linear-gradient(@selected-color, darken(@selected-color, 5%));
     }
@@ -24,11 +31,11 @@
   @bg: darken(@color, 10%);
   @hover: @color;
   @selected: @color;
-  .btn-background(@bg, @hover, @selected, @text-color-highlight);
+  .btn-background(@bg, @hover, @selected, @white);
 }
 
 .btn {
-  .btn-background(@button-background-color, @button-background-color-hover, @button-background-color-selected, @text-color);
+  .btn-background(@blue, lighten(@blue, 10%), lighten(@blue, 10%), @white);
 }
 
 .btn.btn-primary {
