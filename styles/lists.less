@@ -48,7 +48,7 @@
   li.two-lines {
     .secondary-line { color: @text-color-subtle; }
     &.selected .secondary-line {
-      color: @text-color;
+      color: @white;
       text-shadow: none;
     }
   }
@@ -57,6 +57,11 @@
   // know their size.
   li.selected {
     background-color: @background-color-selected;
+    color: @white;
+    text-shadow: none;
+    .secondary-line {
+      color: @white;
+    }
     &:before{ display: none; }
   }
 
